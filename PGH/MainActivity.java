@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     Button btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9;
     Button btnReset, btnDel, btnLeftP, btnRightP, btnDot, btnEqual;
     Button btnPlus, btnMinus, btnMulti, btnDivision, btnLog, btnConvertSD, btnMod, btnInvolution, btnFactorial;
-    Button btnConv, btnPi, btnSqrt, btnAbs, btnSamgak;
+    Button btnConv, btnPi, btnSqrt, btnAbs, btnTrigono;
 
     TextView operExpressionDisplay, historyDisplay;
     ScrollView scrollView;
@@ -22,8 +22,9 @@ public class MainActivity extends AppCompatActivity {
     History history;
 
 
-    String operExpression, input, historyData;
+    String operExpression, input, historyData, comp;
     Double result;
+    ConvertFunc cvf;
 
 
     @Override
@@ -75,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         btnPi = (Button) findViewById(R.id.btnPi);
         btnSqrt = (Button) findViewById(R.id.btnSqrt);
         btnAbs = (Button) findViewById(R.id.btnAbs);
-        btnSamgak = (Button) findViewById(R.id.btnSamgak);
+        btnTrigono = (Button) findViewById(R.id.btnTrigono);
 
 
         operExpressionDisplay = (TextView) findViewById(R.id.operExpression);
@@ -84,11 +85,13 @@ public class MainActivity extends AppCompatActivity {
 
         io = new InputOutput();
         history = new History();
+        cvf = new ConvertFunc();
 
         //변수 초기화
         operExpression = "";
         input = "";
         result = 0.0;
+        comp = new String();
     }
 
 
@@ -196,7 +199,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
 
                     case R.id.btnMod:
-                        input += "m";
+                        input += "%";
                         operExpression += "mod";
                         break;
 
@@ -206,7 +209,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
 
                     case R.id.btnConv: //my
-                        input += "c";
+                        input += "c(";
                         operExpression += "conv(";
                         break;
 
@@ -216,28 +219,31 @@ public class MainActivity extends AppCompatActivity {
                         break;
 
                     case R.id.btnSqrt:
-                        input += "S";
+                        input += "s(";
                         operExpression += "Sqrt(";
                         break;
 
                     case R.id.btnAbs:
-                        input += "A";
+                        input += "a(";
                         operExpression += "Abs(";
                         break;
 
-                    case R.id.btnSamgak:
-                        input += "S";
-                        operExpression += "Samgak(";
+                    case R.id.btnTrigono:
+                        input += "t(";
+                        operExpression += "trigono(";
                         break;
 
                     case R.id.btnLog:
-                        input += "l";
+                        input += "l(";
                         operExpression += "log";
                         break;
 
                     case R.id.btnConvertSD: //con
-                        input += "e";
-                        operExpression += "exp";
+                        //input += "";
+                        operExpression = cvf.convertSelect(input);
+                        System.out.println(input);
+                        System.out.println(operExpression);
+                        input = operExpression;
                         break;
 
                     case R.id.btnFactorial:
@@ -262,15 +268,35 @@ public class MainActivity extends AppCompatActivity {
 
                     case R.id.btnEqual:
                         operExpression += "=";
-                        result = io.inputFunction(input);            ///////////////여기가 포인트다
+                        result = io.inputFunction(input);
 
                         //show history
                         historyData = history.showHistory(operExpression + result);
                         historyDisplay.append(historyData);
-                        scrollView.fullScroll(View.FOCUS_DOWN);
 
-                        operExpression = result + "";
-                        input = result + "";
+
+                        comp = io.popNumStack();
+                        if(comp=="tri" && !io.isEmtyNumStack()) {
+                            //System.out.println(io.popNumStack());
+                            historyDisplay.append("tan: "+io.popNumStack()+"\n");
+                            historyDisplay.append("cos: "+io.popNumStack()+"\n");
+                            historyDisplay.append("sin: "+io.popNumStack()+"\n");
+                            scrollView.fullScroll(View.FOCUS_DOWN);
+                            operExpression = "";
+                            input = "";
+                        } else if(comp=="cov" && !io.isEmtyNumStack()) {
+                            historyDisplay.append("HEX: "+io.popNumStack()+"\n");
+                            historyDisplay.append("OCT: "+io.popNumStack()+"\n");
+                            historyDisplay.append("BIN: "+io.popNumStack()+"\n");
+                            scrollView.fullScroll(View.FOCUS_DOWN);
+                            operExpression = "";
+                            input = "";
+                        } else{
+                            scrollView.fullScroll(View.FOCUS_DOWN);
+                            operExpression = result + "";
+                            input = result + "";
+                        }
+
                         break;
 
                     case R.id.btnDel:
@@ -313,7 +339,7 @@ public class MainActivity extends AppCompatActivity {
         btnPi.setOnClickListener(OperationListener);
         btnSqrt.setOnClickListener(OperationListener);
         btnAbs.setOnClickListener(OperationListener);
-        btnSamgak.setOnClickListener(OperationListener);
+        btnTrigono.setOnClickListener(OperationListener);
 
 
 
