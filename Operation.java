@@ -1,75 +1,71 @@
-package SampleCal;
+package com.example.scicalc;
+
 
 public class Operation {
-	public double operationPlus(double a, double b) {
-		return a+b;
-	}//µ¡¼À
-	
-	public double operationMinus(double a, double b) {
-		return a-b;
-	}//»¬¼À
-	
-	public double operationDiv(double a, double b) {
-		return a/b;
-	}//³ª´°¼À
-	
-	public double operationMulti(double a, double b) {
-		return a*b;
-	}//°ö¼À
-	
-	public double operationMod(double a, double b) {
-		return a%b;
-	}//³ª¸ÓÁö
-	
-	public double operationLogFunction(double a) {
-		return Math.log(a);
-	}//
-	
-	public double operationInvolutionFunction(double a,double b) {
-		return Math.pow(a,b);
-		
-	}//°ÅµìÁ¦°ö ¿¬»ê(Áö¼ö¿¬»ê)
-	
-	public double operationSqrtFunction(double a) {
-		return Math.sqrt(a);
-	}//Á¦°ö±Ù 
-	
-	public double operationFactorialFunction(double a) {
-		if (a<=1) {
-			return 1 ;
-		}else {
-			return operationFactorialFunction(a-1)*a;
-		}// ÆÑÅä¸®¾ó ¿¬»ê 
-	}
-	
-	public double[] operationSAMGAK(double a) {
-		
-		double samgak []  = new double[3];
-		
-		samgak[0] = Math.sin(a);
-		samgak[1] = Math.cos(a);
-		samgak[2] = Math.tan(a);
-		
-		return samgak;
-		}//»ï°¢ÇÔ¼ö
-	
-	public double operationAbs(double a) {
-		return Math.abs(a);
-	}//Àý´ë°ª
-	
-	public String[] operationtoDeposition(double a) {
-		int b = Integer.parseInt(String.valueOf(Math.round(a)));
-		
-		String Deposit [] = new String[3];
-		
-		Deposit[0] = Integer.toBinaryString((int)b);
-		Deposit[1] = Integer.toOctalString((int)b);
-		Deposit[2] = Integer.toHexString((int)b);
-		
-		return Deposit;
-		
-		
-	}//Áø¹ýº¯È¯ 
-	
+    public double operationPlus(double a, double b) {
+        return a+b;
+    }//ë§ì…ˆ
 
+    public double operationMinus(double a, double b) {
+        return a-b;
+    }//ëº„ì…ˆ
+
+    public double operationDiv(double a, double b) {
+        return a/b;
+    }//ë‚˜ëˆ—ì…ˆ
+
+    public double operationMulti(double a, double b) {
+        return a*b;
+    }//ê³±ì…ˆ
+
+    public double operationMod(double a, double b) {
+        return a%b;
+    }//ë‚˜ë¨¸ì§€
+
+    public double operationLog10(double a) {
+        return Math.log10(a);
+    }//ìƒìš©ë¡œê·¸ ì—°ì‚°
+
+    public double operationSqrt(double a) {
+        return Math.sqrt(a);
+    }//ì œê³±ê·¼ ì—°ì‚°
+
+    public double operationInvolution(double a,double b) {
+        return Math.pow(a,b);
+
+    }//ê±°ë“­ì œê³± ì—°ì‚°
+
+    public double operationFactorial(double a) {
+        if (a<=1) {
+            return 1 ;
+        }else {
+            return (operationFactorial(a-1))*a;
+        }// íŒ©í† ë¦¬ì–¼ ì—°ì‚°
+    }
+    public double[] operationTrigono(double a) {
+
+        double trigono []  = new double[3];
+
+        trigono[0] = Math.sin(a);
+        trigono[1] = Math.cos(a);
+        trigono[2] = Math.tan(a);
+
+        return trigono;
+    }//ì‚¼ê°í•¨ìˆ˜
+
+    public double operationAbs(double a) {
+        return Math.abs(a);
+    }//ì ˆëŒ€ê°’
+
+    public String[] operationToDeposition(double a) {
+        int b = Integer.parseInt(String.valueOf(Math.round(a)));
+
+        String Deposit [] = new String[3];
+
+        Deposit[0] = Integer.toBinaryString((int)b);
+        Deposit[1] = Integer.toOctalString((int)b);
+        Deposit[2] = Integer.toHexString((int)b);
+
+        return Deposit;
+    }
 }
