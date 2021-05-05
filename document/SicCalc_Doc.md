@@ -8,8 +8,7 @@
 2. 구조 설계 (Structure Design)
 1) UML(Unified Modeling Language) Diagram
 (1) Use Case Diagram
-![Use Case Diagram](https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/UML_Diagram/usecaseDiagram.png "Use Case Diagram")
-<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/UML_Diagram/usecaseDiagram.png" width="450px" height="300px" title="Use Case Diagram" alt="Use Case Diagram"></img><br/>
+<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/UML_Diagram/usecaseDiagram.png" width="550px" height="400px" title="Use Case Diagram" alt="Use Case Diagram"></img><br/>
 
 (2) Sequence Diagram
 이미지 링크
