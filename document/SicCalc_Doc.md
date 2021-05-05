@@ -1,25 +1,25 @@
-#  공학용 계산기 팀 프로젝트
-#### 날짜: 2020.05.05 | 작성자: 박건희 | Version: 1.0
+##  공학용 계산기 팀 프로젝트
+##### 날짜: 2020.05.05 | 작성자: 박건희 | Version: 1.0
 
 ------------------------------------
 
-# 1. 요구사항 분석 (Requirement Analysis)
+## 1. 요구사항 분석 (Requirement Analysis)
 * 공학용 계산기 구현
 * 안드로이드 애플리케이션으로 구현
 
-# 2. 구조 설계 (Structure Design)
-## 1) UML(Unified Modeling Language) Diagram
-### (1) Use Case Diagram
+## 2. 구조 설계 (Structure Design)
+### 1) UML(Unified Modeling Language) Diagram
+#### (1) Use Case Diagram
 <img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/UML_Diagram/usecaseDiagram.png" width="550px" height="400px" title="Use Case Diagram" alt="Use Case Diagram"></img><br/>
 
-### (2) Sequence Diagram
+#### (2) Sequence Diagram
 이미지 링크
 
-### (3) Class Diagram
+#### (3) Class Diagram
 <img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/UML_Diagram/class_diagram.png" width="600px" height="400px" title="Use Case Diagram" alt="Use Case Diagram"></img><br/>
 
 
-## 2) 클래스 생성
+### 2) 클래스 생성
 * InputOutput 클래스
 
 * Operation 클래스
@@ -32,7 +32,7 @@
   - onCreate 메서드, init 메서드, setNumListener 메서드, onClick 메서드, setOperationListener 메서드를 포함하고 있다.
 
 
-## 3) 기능(함수)
+### 3) 기능(함수)
 * InputOutput 클래스 안에 있는 메서드
 
 * Operation 클래스 안에 있는 메서드
@@ -52,18 +52,18 @@
   -각 Button 객체의 setOnClickListener 함수를 통해 이벤트 리스너를 등록한다.
 
 
-## 4) 레이아웃
+### 4) 레이아웃
 * activity_main.xml: 사용자가 보는 화면으로 출력되는 UI를 나타낸다. ScrollView 위젯, TextView 위젯, Button 위젯들을 포함하고 있다.
 
 
-# 3. 입력/출력 데이터 정의 (Data Structure Design)
+## 3. 입력/출력 데이터 정의 (Data Structure Design)
 * 데이터 종류: 피연산자(실수, double), 연산자(Character), Button 위젯 기능(0~9 정수, 소수점, 파이, 연산자(+,-,*,/,%,mod,log10,pow,factorial, Sqrt, Abs, Trigono), 진법변환, ConvertSD,  reset, delete), 수식(문자열, String)
 * 입력: Button 위젯(피연산자, 연산자, 진법변환, ConvertSD, reset, delete)
 * 출력: Textview 위젯(수식 계산한 결과값(문자열, String), 이전 계산 결과값(문자열, String)), ScrollView 위젯(history 기능으로 이전 계산 결과값이 쌓일 때 출력)
 
 
 
-# 4. 테스트 이미지 (Test)
+## 4. 테스트 이미지 (Test)
 * 애플리케이션 run
 :시작 화면
 이미지
