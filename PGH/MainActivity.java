@@ -235,7 +235,7 @@ public class MainActivity extends AppCompatActivity {
 
                     case R.id.btnLog:
                         input += "l(";
-                        operExpression += "log";
+                        operExpression += "log(";
                         break;
 
                     case R.id.btnConvertSD: //con
