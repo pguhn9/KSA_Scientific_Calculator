@@ -1,17 +1,152 @@
 #  공학용 계산기 팀 프로젝트
-날짜: 2020.05.05 | 작성자: 박건희 | Version: 1.0
+#### 날짜: 2020.05.05 | 작성자: 박건희 | Version: 1.0
 
-1. 요구사항 분석 (Requirement Analysis)
-공학용 계산기 구현
-안드로이드 애플리케이션으로 구현
+------------------------------------
 
-2. 구조 설계 (Structure Design)
-1) UML(Unified Modeling Language) Diagram
-(1) Use Case Diagram
+# 1. 요구사항 분석 (Requirement Analysis)
+* 공학용 계산기 구현
+* 안드로이드 애플리케이션으로 구현
+
+# 2. 구조 설계 (Structure Design)
+## 1) UML(Unified Modeling Language) Diagram
+### (1) Use Case Diagram
 <img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/UML_Diagram/usecaseDiagram.png" width="550px" height="400px" title="Use Case Diagram" alt="Use Case Diagram"></img><br/>
 
-(2) Sequence Diagram
+### (2) Sequence Diagram
 이미지 링크
 
-(3) Class Diagram
-이미지 링크
+### (3) Class Diagram
+<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/UML_Diagram/class_diagram.png" width="600px" height="400px" title="Use Case Diagram" alt="Use Case Diagram"></img><br/>
+
+
+## 2) 클래스 생성
+* InputOutput 클래스
+
+* Operation 클래스
+
+* History 클래스
+
+* MainActivity 클래스
+  - 필드: Button 위젯의 id들을 선언, TextView 위젯의 id들을 선언, ScrollView 위젯의 id를 선언하고 있다.
+  - 필드: InputOutput 클래스 선언, History 클래스 선언, ConvertFunc 클래스선언, 문자열 타입의 operExpression, input, historyData, comp 선언, double(실수형)타입의 result 선언하고 있다.
+  - onCreate 메서드, init 메서드, setNumListener 메서드, onClick 메서드, setOperationListener 메서드를 포함하고 있다.
+
+
+## 3) 기능(함수)
+* InputOutput 클래스 안에 있는 메서드
+
+* Operation 클래스 안에 있는 메서드
+
+* History 클래스 안에 있는 메서드
+
+* MainActivity 클래스 안에 있는 메서드
+  - @Override OnCreate 메서드: Button 리소스를 연결하기 위한 초기화(init), Button 리스너(setNumListener, setOperationListener)를 호출하고 있다.
+  - init 메서드: Button을 각각의 기능과 연결해주고 하고 있다. 또한 InputOutput 객체와 History 객체, ConvertFunc 객체를 생성하고 operExpression, input, result, comp 변수를 초기화한다.
+  - setNumListener 메서드: 리스너 정의를 한다.
+  - @Override onClick 메서드: 숫자 버튼이 눌렸을 때, Button의 id 값에 따라서 수식을 저장하는 변수(operExpression)에 숫자 문자열(0~9)을 저장한다. 저장된 연산식이 화면에 출력되도록 한다. 각   Button 객체의 setOnClickListener 함수를 통해 이벤트 리스너를 등록한다.
+  - setOperationListener 메서드: 리스너 정의를 한다.
+  - @Override onClick 메서드: 연산자 버튼이 눌렸을 때, Button의 id값에 따라서 수식을 저장하는 변수(operExpression)에 연산자, 괄호, 소수점(+, -, *, /, mod, ^, conv(,π , Sqrt( , Abs( ,   trigono( ,log(, !, (,), ., =)을 저장한다. 
+  - '=' 연산자를 누르면 History에 저장되도록 한다. InputOutput객체의 numStack을 확인하여 삼각함수 연산이거나 진법 변환 연산일 경우, numStack에 담아놓은 값 3개를 pop하여 historyDisplay에   보이게 한다.
+  - ‘S<=>D’버튼을 누르면 현재 입력된 수식이 소수인지 분수인지 확인하여 소수면 분수로 변환, 분수면 소수로 변환하여 연산식이 출력되도록 한다.
+  -'del'버튼을 누르면 해당 수식에서 가장 마지막에 들어간 것이 지워진다. 'reset' 버튼을 누르면 해당 수식이 모두 없어지도록 한다. 저장된 연산식이 화면에 출력되도록 한다. 
+  -각 Button 객체의 setOnClickListener 함수를 통해 이벤트 리스너를 등록한다.
+
+
+## 4) 레이아웃
+* activity_main.xml: 사용자가 보는 화면으로 출력되는 UI를 나타낸다. ScrollView 위젯, TextView 위젯, Button 위젯들을 포함하고 있다.
+
+
+# 3. 입력/출력 데이터 정의 (Data Structure Design)
+* 데이터 종류: 피연산자(실수, double), 연산자(Character), Button 위젯 기능(0~9 정수, 소수점, 파이, 연산자(+,-,*,/,%,mod,log10,pow,factorial, Sqrt, Abs, Trigono), 진법변환, ConvertSD,  reset, delete), 수식(문자열, String)
+* 입력: Button 위젯(피연산자, 연산자, 진법변환, ConvertSD, reset, delete)
+* 출력: Textview 위젯(수식 계산한 결과값(문자열, String), 이전 계산 결과값(문자열, String)), ScrollView 위젯(history 기능으로 이전 계산 결과값이 쌓일 때 출력)
+
+
+
+# 4. 테스트 이미지 (Test)
+* 애플리케이션 run
+:시작 화면
+이미지
+
+* 애플리케이션 숫자 입력
+:1234567890
+이미지
+
+* 애플리케이션 덧셈 연산
+:17+22
+이미지
+
+* 애플리케이션 뺄셈 연산
+:39-40
+이미지
+
+* 애플리케이션 곱셈 연산
+:9*12
+이미지
+
+* 애플리케이션 나눗셈 연산
+:40/4
+이미지
+
+* 애플리케이션 나머지 연산
+:13mod3
+이미지
+
+* 애플리케이션 상용로그 연산 (log)
+:log(100)
+이미지
+
+* 애플리케이션 거듭제곱 연산
+:3^4
+이미지
+
+* 애플리케이션 팩토리얼 연산
+:5!
+이미지
+
+* 애플리케이션 소수점 연산
+:1.1+3.4
+이미지
+
+* 애플리케이션 괄호 연산
+:5+2*(9-4)
+이미지
+
+* 애플리케이션 절대값 연산
+:Abs(-9)
+이미지
+
+* 애플리케이션 삼각함수 연산
+:Trigono(90)
+이미지
+
+* 애플리케이션 제곱근 연산
+:Sqrt(16)
+이미지
+
+* 애플리케이션 소수->분수 기능
+:4.12
+이미지
+
+* 애플리케이션 소수<-분수 기능
+:103/25
+이미지
+
+* 애플리케이션 진법변환 기능
+:Conv(18)
+이미지
+
+* 애플리케이션 Delete 기능
+:12345678
+이미지
+
+* 애플리케이션 Reset 기능
+:CE
+이미지
+
+* 애플리케이션 History 기능
+:이전 연산 결과
+이미지
+
+
+
