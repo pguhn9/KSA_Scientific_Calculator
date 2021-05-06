@@ -13,8 +13,9 @@
 <img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/UML_Diagram/usecaseDiagram.png" width="550px" height="400px" title="Use Case Diagram" alt="Use Case Diagram"></img><br/>
 
 #### (2) Sequence Diagram
-이미지 링크
-
+<img
+src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/UML_Diagram/sequence_diagram.png"
+width="600px" height="400px" title="Use Case Diagram" alt="Use Case Diagram"></img><br/>
 #### (3) Class Diagram
 <img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/UML_Diagram/class_diagram.png" width="600px" height="400px" title="Use Case Diagram" alt="Use Case Diagram"></img><br/>
 
