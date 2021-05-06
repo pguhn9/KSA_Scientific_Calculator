@@ -38,7 +38,7 @@ width="600px" height="400px" title="Use Case Diagram" alt="Use Case Diagram"></i
   	
 * ConvertFunc 클래스
   -	사용자가 입력한 수식의 연산한 결과값을 분수를 소수로 변환하고, 소수는 최대공약수를 이용해서 분수로 변환하는 메소드을 포함하고 있다.
-  -	
+  	
 * History 클래스
  -	사용자가 입력한 수식을 연산한 결과값을 문자열(String)에 맨 마지막에 한 줄 띄어쓰기(“\n”)를 붙여 넣고 그 문자열을 반환하는 메서드를 포함하고 있다.
 
@@ -72,10 +72,10 @@ width="600px" height="400px" title="Use Case Diagram" alt="Use Case Diagram"></i
   - operationAbs 메서드: 입력된 숫자(피연산자)1개를 사용하여 절대값을 구한다.
   - operationToDeposition 메서드 : 입력된 숫자(피연산자)1개를 사용하여 2진수,8진수,16진수 변환된 값을 구한다.
 * ConvertFunc 클래스 안에 있는 메서드
- - convertSelect 메서드 : 소수-> 분수 , 분수 -> 소수를 바꾸는 것을 선택 할 수 있다.
- - operationFraction 메서드: 소수를 분수로 바꿀 수 있다.
- - operationRealNum 메서드: 분수를 소수로 바꿀 수 있다.
- - operationGcd 메서드 : 유클리드 호제드 법을 이용하여 최대 공약수를 구할 수 있다. 
+ - convertSelect 메서드 : 입력된 문자를 ".","/"을 기준으로  소수-> 분수 , 분수 -> 소수를 바꾸는 것을 선택 할 수 있다.
+ - operationFraction 메서드: 입력된 문자를 소수에서 분수로 바꿀 수 있다.
+ - operationRealNum 메서드: 입력된 문자를 분수에서 소수로 바꿀 수 있다.
+ - operationGcd 메서드 : 유클리드 호제법을 이용하여 최대 공약수를 구할 수 있다. 
 
 * History 클래스 안에 있는 메서드
   - histoyFunction 메서드  
