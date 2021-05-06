@@ -22,7 +22,14 @@ width="600px" height="400px" title="Use Case Diagram" alt="Use Case Diagram"></i
 
 ### 2) 클래스 생성
 * InputOutput 클래스
-
+  - 수식의 연산 우선 순위의 HashMap, 연산자 Stack, 피연산자 Stack, 후위 연산 표기법으로 변환된 문자열의 ArrayList, 입력받은 수식 문자열 ArrayList의 자료구조를 필드로 갖고 있다.
+  - 연산자의 우선순위를 결정해주기 위해 초기화 한다.
+  - 출력할 때 필요한 메서드(popNumStack)를 포함한다.
+  - numstack이 비었는지 확인하는 메서드(isEmptyNumStack)를 포함한다.
+  - 입력된 수식의 연산자와 피연산자(숫자)를 분류하는 메서드(inputFunction)를 포함한다.
+  - 후위 연산식으로 만드는 메서드(postFixFunction)을 포함한다.
+  - 연산자에 따라서 연산식을 수행하는 메서드(calculatorFunction)를 포함한다.
+  - 올바른 연산자인지 아닌지 판별하는 메서드(isOperation)을 포함한다.
 * Operation 클래스
 
 * History 클래스
@@ -35,7 +42,13 @@ width="600px" height="400px" title="Use Case Diagram" alt="Use Case Diagram"></i
 
 ### 3) 기능(함수)
 * InputOutput 클래스 안에 있는 메서드
-
+  - init 메서드: ArrayList로 선언된 output과 inputString을 초기화하고 객체를 생성한다.
+  - popNumStack 메서드 : 출력할때 numStack의 숫자를 하나씩 pop해주는 메서드
+  - isEmptyStack 메서드 : numStack이 비었는지 여부를 확인하는 메서드
+  - inputFunction 메서드: 입력된 수식(문자열)을 연산자와 피연산자(숫자)로 분류하는 메서드
+  - postFixFunction 메서드: 입력된 수식(문자열)을 inputFunction메서드를 통해 연산자와 피연산자로 분류된 후, 후위 연산식으로 만드는 메서드
+  - calculatorFunction 메서드: 입력된 수식(문자열)에서 연산자에 따라 연산을 진행하는 메서드
+  - isOperation 메서드: HashMap에 저장되어 있는 올바른 연산자인지 아닌지 판별하는 메서드
 * Operation 클래스 안에 있는 메서드
 
 * History 클래스 안에 있는 메서드
