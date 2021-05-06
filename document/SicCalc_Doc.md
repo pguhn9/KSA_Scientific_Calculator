@@ -32,9 +32,9 @@ width="600px" height="400px" title="Use Case Diagram" alt="Use Case Diagram"></i
   - 올바른 연산자인지 아닌지 판별하는 메서드(isOperation)을 포함한다.
   
 * Operation 클래스
-  -	입력으로 들어오는 연산자에 따라서 수식을 연산하는 기능을 포함하고 있다.
-  -	기본적인 사칙연산(덧셈, 뺄셈 ,곱셈 ,나눗셈)을 구현하는 메서드를 포함하고 있다. 
-  -	추가적으로 상용로그 연산, 지수 연산, 진법 변환, 팩토리얼, 제곱근 연산, 삼각함수 연산, 절댓값 변환을 포함하고 있다.
+  - 입력으로 들어오는 연산자에 따라서 수식을 연산하는 기능을 포함하고 있다.
+  - 기본적인 사칙연산(덧셈, 뺄셈 ,곱셈 ,나눗셈)을 구현하는 메서드를 포함하고 있다. 
+  - 추가적으로 상용로그 연산, 지수 연산, 진법 변환, 팩토리얼, 제곱근 연산, 삼각함수 연산, 절댓값 변환을 포함하고 있다.
   	
 * ConvertFunc 클래스
   -	사용자가 입력한 수식의 연산한 결과값을 분수를 소수로 변환하고, 소수는 최대공약수를 이용해서 분수로 변환하는 메소드을 포함하고 있다.
@@ -62,8 +62,8 @@ width="600px" height="400px" title="Use Case Diagram" alt="Use Case Diagram"></i
   - operationPlus 메서드 : 입력된 숫자(피연산자) 2개를 사용하여 덧셈한다.
   - operationMinus 메서드 : 입력된 숫자(피연산자) 2개를 사용하여 뺄셈하는 메서드(뻬고자 하는 숫자에 -1을 곱하여 덧셈을 한다.)
   - operationMulti 메서드 : 입력된 숫자(피연산자) 2개를 사용하여 곱한다.
-	- operationDiv 메서드 : 입력된 숫자(피연산자) 2개를 사용하여 나눈다.
-	- operationMod 메서드: 입력된 숫자(피연산자) 2개를 사용하여 나머지 값을 구한다.
+  - operationDiv 메서드 : 입력된 숫자(피연산자) 2개를 사용하여 나눈다.
+  - operationMod 메서드: 입력된 숫자(피연산자) 2개를 사용하여 나머지 값을 구한다.
   - operationLog10 메서드 : 입력된 숫자(피연산자)1개를 사용하여 상용로그(10을 밑으로 하는 로그 함수) 함수 값을 구한다.
   - operationSqrt 메서드: 입력된 숫자(피연산자)1개를 사용하여 제곱근을 반환한 값을 구한다.
   - operationInvolution 메서드: 입력된 숫자(피연산자)2개를 사용하여 x에 y승을 계산을 반환하여 값을 구한다.
@@ -72,6 +72,10 @@ width="600px" height="400px" title="Use Case Diagram" alt="Use Case Diagram"></i
   - operationAbs 메서드: 입력된 숫자(피연산자)1개를 사용하여 절대값을 구한다.
   - operationToDeposition 메서드 : 입력된 숫자(피연산자)1개를 사용하여 2진수,8진수,16진수 변환된 값을 구한다.
 * ConvertFunc 클래스 안에 있는 메서드
+ - convertSelect 메서드 : 소수-> 분수 , 분수 -> 소수를 바꾸는 것을 선택 할 수 있다.
+ - operationFraction 메서드: 소수를 분수로 바꿀 수 있다.
+ - operationRealNum 메서드: 분수를 소수로 바꿀 수 있다.
+ - operationGcd 메서드 : 유클리드 호제드 법을 이용하여 최대 공약수를 구할 수 있다. 
 
 * History 클래스 안에 있는 메서드
   - histoyFunction 메서드  
