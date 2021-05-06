@@ -15,9 +15,10 @@
 #### (2) Sequence Diagram
 <img
 src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/UML_Diagram/sequence_diagram.png"
-width="600px" height="400px" title="Use Case Diagram" alt="Use Case Diagram"></img><br/>
+width="600px" height="400px" title="Sequence Diagram" alt="Sequence Diagram"></img><br/>
+
 #### (3) Class Diagram
-<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/UML_Diagram/class_diagram.png" width="600px" height="400px" title="Use Case Diagram" alt="Use Case Diagram"></img><br/>
+<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/UML_Diagram/class_diagram.png" width="600px" height="400px" title="Class Diagram" alt="Class Diagram"></img><br/>
 
 
 ### 2) 클래스 생성
@@ -110,84 +111,120 @@ width="600px" height="400px" title="Use Case Diagram" alt="Use Case Diagram"></i
 이미지
 
 * 애플리케이션 숫자 입력
+
 :1234567890
-이미지
+
+<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/Image/start.png" width="400px" height="850px" title="start" alt="start"></img><br/>
 
 * 애플리케이션 덧셈 연산
+
 :17+22
-이미지
+
+<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/Image/plus.PNG" width="400px" height="850px" title="plus" alt="plus"></img><br/>
 
 * 애플리케이션 뺄셈 연산
+
 :39-40
-이미지
+
+<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/Image/minus.PNG" width="400px" height="850px" title="minus" alt="minus"></img><br/>
 
 * 애플리케이션 곱셈 연산
+
 :9*12
-이미지
+
+<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/Image/mult.PNG" width="400px" height="850px" title="mult" alt="mult"></img><br/>
 
 * 애플리케이션 나눗셈 연산
+
 :40/4
-이미지
+
+<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/Image/div.PNG" width="400px" height="850px" title="div" alt="div"></img><br/>
 
 * 애플리케이션 나머지 연산
+
 :13mod3
-이미지
+
+<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/Image/mod.PNG" width="400px" height="850px" title="mod" alt="mod"></img><br/>
 
 * 애플리케이션 상용로그 연산 (log)
+
 :log(100)
-이미지
+
+<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/Image/log10.PNG" width="400px" height="850px" title="log10" alt="log10"></img><br/>
 
 * 애플리케이션 거듭제곱 연산
+
 :3^4
-이미지
+
+<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/Image/pow.PNG" width="400px" height="850px" title="pow" alt="pow"></img><br/>
 
 * 애플리케이션 팩토리얼 연산
+
 :5!
-이미지
+
+<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/Image/Factorial.PNG" width="400px" height="850px" title="Factorial" alt="Factorial"></img><br/>
 
 * 애플리케이션 소수점 연산
+
 :1.1+3.4
-이미지
+
+<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/Image/dotplus.PNG" width="400px" height="850px" title="dotplus" alt="dotplus"></img><br/>
 
 * 애플리케이션 괄호 연산
+
 :5+2*(9-4)
-이미지
+
+<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/Image/operation.PNG" width="400px" height="850px" title="operation" alt="operation"></img><br/>
 
 * 애플리케이션 절대값 연산
+
 :Abs(-9)
-이미지
+
+<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/Image/abs.PNG" width="400px" height="850px" title="abs" alt="abs"></img><br/>
 
 * 애플리케이션 삼각함수 연산
+
 :Trigono(90)
-이미지
+
+<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/Image/trigono.PNG" width="400px" height="850px" title="trigono" alt="trigono"></img><br/>
 
 * 애플리케이션 제곱근 연산
+
 :Sqrt(16)
-이미지
 
-* 애플리케이션 소수->분수 기능
-:4.12
-이미지
+<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/Image/sqrt.PNG" width="400px" height="850px" title="sqrt" alt="sqrt"></img><br/>
 
-* 애플리케이션 소수<-분수 기능
-:103/25
-이미지
+* 애플리케이션 소수<->분수 기능
+
+:4.12 <-> 103/25
+
+<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/Image/fraction1.PNG" width="400px" height="850px" title="fraction1" alt="fraction1"></img><br/>
+<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/Image/fraction2.PNG" width="400px" height="850px" title="fraction2" alt="fraction2"></img><br/>
+
 
 * 애플리케이션 진법변환 기능
+
 :Conv(18)
-이미지
+
+<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/Image/conv.PNG" width="400px" height="850px" title="conv" alt="conv"></img><br/>
 
 * 애플리케이션 Delete 기능
+
 :12345678
-이미지
+
+<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/Image/del.PNG" width="400px" height="850px" title="del" alt="del"></img><br/>
 
 * 애플리케이션 Reset 기능
+
 :CE
-이미지
+
+<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/Image/clear.PNG" width="400px" height="850px" title="clear" alt="clear"></img><br/>
 
 * 애플리케이션 History 기능
+
 :이전 연산 결과
-이미지
+
+<img src="https://github.com/pguhn9/KSA_Scientific_Calculator/blob/main/Image/history.PNG" width="400px" height="850px" title="history" alt="history"></img><br/>
 
 
 
