@@ -30,9 +30,17 @@ width="600px" height="400px" title="Use Case Diagram" alt="Use Case Diagram"></i
   - 후위 연산식으로 만드는 메서드(postFixFunction)을 포함한다.
   - 연산자에 따라서 연산식을 수행하는 메서드(calculatorFunction)를 포함한다.
   - 올바른 연산자인지 아닌지 판별하는 메서드(isOperation)을 포함한다.
+  
 * Operation 클래스
-
+  -	입력으로 들어오는 연산자에 따라서 수식을 연산하는 기능을 포함하고 있다.
+  -	기본적인 사칙연산(덧셈, 뺄셈 ,곱셈 ,나눗셈)을 구현하는 메서드를 포함하고 있다. 
+  -	추가적으로 상용로그 연산, 지수 연산, 진법 변환, 팩토리얼, 제곱근 연산, 삼각함수 연산, 절댓값 변환을 포함하고 있다.
+  	
+* ConvertFunc 클래스
+  -	사용자가 입력한 수식의 연산한 결과값을 분수를 소수로 변환하고, 소수는 최대공약수를 이용해서 분수로 변환하는 메소드을 포함하고 있다.
+  -	
 * History 클래스
+ -	사용자가 입력한 수식을 연산한 결과값을 문자열(String)에 맨 마지막에 한 줄 띄어쓰기(“\n”)를 붙여 넣고 그 문자열을 반환하는 메서드를 포함하고 있다.
 
 * MainActivity 클래스
   - 필드: Button 위젯의 id들을 선언, TextView 위젯의 id들을 선언, ScrollView 위젯의 id를 선언하고 있다.
@@ -49,9 +57,24 @@ width="600px" height="400px" title="Use Case Diagram" alt="Use Case Diagram"></i
   - postFixFunction 메서드: 입력된 수식(문자열)을 inputFunction메서드를 통해 연산자와 피연산자로 분류된 후, 후위 연산식으로 만드는 메서드
   - calculatorFunction 메서드: 입력된 수식(문자열)에서 연산자에 따라 연산을 진행하는 메서드
   - isOperation 메서드: HashMap에 저장되어 있는 올바른 연산자인지 아닌지 판별하는 메서드
+
 * Operation 클래스 안에 있는 메서드
+  - operationPlus 메서드 : 입력된 숫자(피연산자) 2개를 사용하여 덧셈한다.
+  - operationMinus 메서드 : 입력된 숫자(피연산자) 2개를 사용하여 뺄셈하는 메서드(뻬고자 하는 숫자에 -1을 곱하여 덧셈을 한다.)
+  - operationMulti 메서드 : 입력된 숫자(피연산자) 2개를 사용하여 곱한다.
+	- operationDiv 메서드 : 입력된 숫자(피연산자) 2개를 사용하여 나눈다.
+	- operationMod 메서드: 입력된 숫자(피연산자) 2개를 사용하여 나머지 값을 구한다.
+  - operationLog10 메서드 : 입력된 숫자(피연산자)1개를 사용하여 상용로그(10을 밑으로 하는 로그 함수) 함수 값을 구한다.
+  - operationSqrt 메서드: 입력된 숫자(피연산자)1개를 사용하여 제곱근을 반환한 값을 구한다.
+  - operationInvolution 메서드: 입력된 숫자(피연산자)2개를 사용하여 x에 y승을 계산을 반환하여 값을 구한다.
+  - operationFactorial 메서드: 입력된 숫자(피연산자)1개(n)를 사용하여 1에서 n까지의 모든 자연수의 곱을 계산한 값을 구한다.
+  - operationTrigono 메서드:  입력된 숫자(피연산자)1개를 사용하여 사인, 코사인, 탄젠트를 계산한 값을 구한다.
+  - operationAbs 메서드: 입력된 숫자(피연산자)1개를 사용하여 절대값을 구한다.
+  - operationToDeposition 메서드 : 입력된 숫자(피연산자)1개를 사용하여 2진수,8진수,16진수 변환된 값을 구한다.
+* ConvertFunc 클래스 안에 있는 메서드
 
 * History 클래스 안에 있는 메서드
+  - histoyFunction 메서드  
 
 * MainActivity 클래스 안에 있는 메서드
   - @Override OnCreate 메서드: Button 리소스를 연결하기 위한 초기화(init), Button 리스너(setNumListener, setOperationListener)를 호출하고 있다.
