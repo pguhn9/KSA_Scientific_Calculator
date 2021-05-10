@@ -46,43 +46,59 @@ public class InputOutput{
     }
 
     double inputFunction(String inputData) {  //입력받은 String에서 끊어져있는 숫자를 이어준다.(1,0,+,5 -> 10,+,5)
-        init();
-
-        int index = 0;
-        int start = index;
-        int end = index;
-        while(true) {
-            char c = inputData.charAt(index);
-            if (isOperator(c+"")) {
-                inputString.add(c+"");
-                index += 1;
-            } else if (c == 'P') {
-                inputString.add("3.14159265358979");
-                index += 1;
-            }else {
-                start = index;
-                while(true) {
-                    if(index == inputData.length()-1) {
-                        end = index+1;
-                        inputString.add(inputData.substring(start, end));
-                        index += 1;
-                        break;
-                    } else if(isOperator(inputData.charAt(index+1)+"")) {
-                        end = index+1;
-                        inputString.add(inputData.substring(start, end));
-                        index += 1;
-                        break;
-                    } else {
-                        index += 1;
-                    }
-                }
-            }
-            if (index == inputData.length())
-                break;
-        }
-        System.out.println(inputString);
-        return postFixFunction();
-    }
+		init();
+		
+		int index = 0;
+		int start = index;
+		int end = index;
+		while(true) {
+			char c = inputData.charAt(index);
+			if (isOperator(c+"")) {
+				if ( c == '-') {
+					if (index == 0) {
+						inputString.add("-1");
+						inputString.add("*");
+						index += 1;
+					}
+					else {
+						if(isOperator(inputData.charAt(index-1)+"")) {
+							inputString.add("-1");
+							inputString.add("*");
+							index += 1;
+						}
+					}
+				}
+				else{
+					inputString.add(c+"");
+					index += 1;
+				}
+			} else if (c == 'P') {
+				inputString.add("3.14159265358979");
+				index += 1;
+			}else {
+				start = index;
+				while(true) {
+					if(index == inputData.length()-1) {
+						end = index+1;
+						inputString.add(inputData.substring(start, end));
+						index += 1;
+						break;
+					} else if(isOperator(inputData.charAt(index+1)+"")) {
+						end = index+1;
+						inputString.add(inputData.substring(start, end));
+						index += 1;
+						break;
+					} else {
+						index += 1;
+					}
+				}	
+			}
+			if (index == inputData.length())
+				break;
+		}
+		System.out.println(inputString);
+		return postFixFunction();
+	}
 
     double postFixFunction() {
         for (int i=0; i<inputString.size(); i++) {
