@@ -65,6 +65,9 @@ public class InputOutput{
 							inputString.add("-1");
 							inputString.add("*");
 							index += 1;
+						} else {
+								inputString.add("-");
+								index += 1;
 						}
 					}
 				}
